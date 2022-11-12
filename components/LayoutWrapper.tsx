@@ -23,10 +23,10 @@ const LayoutWrapper = ({ children }: Props) => {
                 <div className="mr-3">
                   <Image
                     src={'/static/images/logo-l.png'}
-                    alt="logo"
+                    alt="FixtSE Logo"
                     width="250px"
                     height="100px"
-                    className="h-48 w-48 rounded-full"
+                    className="object-cover object-center md:h-36 lg:h-48"
                   />
                 </div>
               </div>
@@ -38,7 +38,7 @@ const LayoutWrapper = ({ children }: Props) => {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
+                  className="rounded py-1 px-2 font-medium text-gray-900 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-700 sm:py-2 sm:px-3"
                 >
                   {link.title}
                 </Link>

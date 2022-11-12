@@ -14,18 +14,12 @@ export default function Pagination({ totalPages, currentPage }: Props) {
       <nav className="flex justify-between">
         {!prevPage && (
           <button className="cursor-auto disabled:opacity-50" disabled={!prevPage}>
-            <span role="img" aria-label="sheep">
-              ⬅️
-            </span>
             Anterior
           </button>
         )}
         {prevPage && (
           <Link href={currentPage - 1 === 1 ? `/blog/` : `/blog/page/${currentPage - 1}`}>
             <button className="cursor-auto disabled:opacity-50" disabled={!prevPage}>
-              <span role="img" aria-label="sheep">
-                ⬅️
-              </span>
               Anterior
             </button>
           </Link>
@@ -36,18 +30,12 @@ export default function Pagination({ totalPages, currentPage }: Props) {
         {!nextPage && (
           <button className="cursor-auto disabled:opacity-50" disabled={!nextPage}>
             Siguiente
-            <span role="img" aria-label="sheep">
-              ➡️
-            </span>
           </button>
         )}
         {nextPage && (
           <Link href={`/blog/page/${currentPage + 1}`}>
             <button className="cursor-auto disabled:opacity-50" disabled={!nextPage}>
               Siguiente
-              <span role="img" aria-label="sheep">
-                ➡️
-              </span>
             </button>
           </Link>
         )}

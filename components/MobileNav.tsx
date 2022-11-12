@@ -22,7 +22,7 @@ const MobileNav = () => {
       <button
         type="button"
         className="ml-1 mr-1 h-8 w-8 rounded py-1"
-        aria-label="Toggle Menu"
+        aria-label="Mostrar Menu"
         onClick={onToggleNav}
       >
         <svg
