@@ -6,7 +6,7 @@ const siteMetadata = {
   language: 'es-es',
   theme: 'system', // system, dark or light
   siteUrl: 'https://fixtse.com',
-  siteRepo: 'https://github.com/fixtse-blg',
+  siteRepo: 'https://github.com/fixtse/fixtse-blog-ts',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',

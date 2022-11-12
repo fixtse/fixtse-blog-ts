@@ -29,7 +29,7 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
             <div className="space-y-1 border-b border-gray-200 pb-10 text-center dark:border-gray-700">
               <dl>
                 <div>
-                  <dt className="sr-only">Published on</dt>
+                  <dt className="sr-only">Publicado el</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>{formatDate(date)}</time>
                   </dd>
