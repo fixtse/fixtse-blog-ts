@@ -5,10 +5,11 @@ export type PostFrontMatter = {
   lastmod?: string
   draft?: boolean
   summary?: string
-  images?: string[]
+  image: string
   authors?: string[]
   layout?: string
   canonicalUrl?: string
   slug: string
   fileName: string
+  id: string
 }

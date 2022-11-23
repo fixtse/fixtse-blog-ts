@@ -11,11 +11,12 @@ const siteMetadata = {
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'fixtse@gmail.com',
-  github: 'https://github.com',
+  github: 'https://github.com/fixtse',
   twitter: 'https://twitter.com/fixtse',
   facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
+  youtube: 'https://www.youtube.com/channel/UCOY6oNxodGWbFg6CjXtae5g',
   linkedin: 'https://www.linkedin.com',
+  instagram: 'https://instagram.com/fixtse',
   locale: 'es-ES',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
