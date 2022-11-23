@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'FixtSE',
   author: 'Fixt',
   headerTitle: 'FixtSE',
-  description: 'Sitio Web Dedicado a la Domótica',
+  description: '',
   language: 'es-es',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://fixtse.com',
