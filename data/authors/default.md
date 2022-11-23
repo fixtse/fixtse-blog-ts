@@ -1,12 +1,13 @@
 ---
-name: Tails Azimuth
-avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+name: Fixt
+avatar: /static/images/avatar.jpeg
+occupation: Systems Engineer, Home Automation Specialist.... Ser humano.
+company: FixtSE
+email: fixtse@gmail.com
+twitter: https://twitter.com/fixtse
+github: https://github.com/fixtse
+youtube: https://www.youtube.com/channel/UCOY6oNxodGWbFg6CjXtae5g
+instagram: https://instagram.com/fixt.se
 ---
 
 Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.

@@ -1,0 +1,45 @@
+---
+title: Como automatizar el brillo de tus luces inteligentes pt 2
+date: '2021-05-24'
+tags: ['Home Assistant', 'Luces Inteligentes', 'Sensores']
+draft: false
+summary: En el vídeo anterior, les mostré como cambiar la iluminación de sus focos inteligentes de acuerdo a la hora del día en la que se encendían. En este vídeo, vamos a llevarlo un paso más lejos, con la ayuda de un sensor de luminosidad, podremos controlar la cantidad de brillo de acuerdo a la cantidad de luz en una habitación.
+images: []
+id: [z6UHiyNot5s]
+layout: PostLayout
+canonicalUrl: como-automatizar-el-brillo-de-tus-luces-inteligentes-pt-2
+autores: ['default']
+---
+
+En el vídeo anterior, les mostré como cambiar la iluminación de sus focos inteligentes de acuerdo a la hora del día en la que se encendían. En este vídeo, vamos a llevarlo un paso más lejos, con la ayuda de un sensor de luminosidad, podremos controlar la cantidad de brillo de acuerdo a la cantidad de luz en una habitación.
+
+Para esto, utilizaremos estos dos plantillas que he creado, para que puedan añadir estar automatización directamente a home assistant.
+
+<div className="flex flex-wrap -mx-2 overflow-hidden xl:-mx-2">
+  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+    ![Light_Sensor](/static/images/automatizar-brillo-pt2/Motion-Sensor-300x300.png)
+    
+    ***Aqara Motion and Illuminance Sensor***
+
+    <center><a href="https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Ffixtse%2Fblueprints%2Fblob%2Fmain%2Flight_motion_brightness.yaml" target="_blank" rel="noopener"><img src="https://my.home-assistant.io/badges/blueprint_import.svg" alt="Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint pre-filled." /></a></center>
+
+    Permite utilizar un sensor de luminosidad, junto a un sensor de movimiento para controlar si la luz debe encenderse o no al detectar movimiento, a demás de ajustar el brillo del foco.
+
+    Aliexpress: https://s.click.aliexpress.com/e/_ANi1X5
+
+  </div>
+  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+    ![Motion_Light_Sensor](/static/images/automatizar-brillo-pt2/mi_light_detection_sensor_2-300x300.png)
+    
+    ***Mi Light Detection Sensor***
+
+    <center><a href="https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Ffixtse%2Fblueprints%2Fblob%2Fmain%2Flight_brightness_sensor_automation.yaml" target="_blank" rel="noopener"><img src="https://my.home-assistant.io/badges/blueprint_import.svg" alt="Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint pre-filled." /></a></center>
+
+    Permite utilizar un sensor de luminosidad, para encender, apagar y ajustar el brillo de un foco inteligente durante el día.
+
+    Aliexpress: https://s.click.aliexpress.com/e/_98Ilzp
+
+  </div>
+</div>
+
+Estas automatizaciones han sido probadas con estos dispositivos, pero deberían de funcionar con cualquier otro de características similares.

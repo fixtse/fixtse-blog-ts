@@ -1,0 +1,76 @@
+---
+title: La forma más fácil de probar Home Assistant
+date: '2020-11-13'
+tags: ['Tutoriales', 'Home Assistant', 'VirtualBox']
+draft: false
+summary: Guia rápida para probar Home Assistant utilizando VirtualBox en Windows y Ubuntu.
+image: '/static/images/probar-hass/virtual_box_1.png'
+id: ['CPhSRS1hhWo']
+layout: PostLayout
+canonicalUrl: probar-home-assistant
+autores: ['default']
+---
+
+<TOCInline toc={props.toc} toHeading={2} asDisclosure />
+
+## Enlaces para descarga
+
+Virtualbox (Solo Windows): https://www.virtualbox.org/wiki/Downloads
+
+![VIRTUAL BOX](/static/images/probar-hass/virtual_box_1.png)
+
+Imágen De Home Assistant: https://www.home-assistant.io/installation
+
+![HOME ASSISTANT IMAGEN](/static/images/probar-hass/hass_img.png)
+
+## Creación de la máquina virtual (VirtualBox)
+
+![V1](/static/images/probar-hass/v1.png)
+
+![V2](/static/images/probar-hass/v2.png)
+
+![V3](/static/images/probar-hass/v3.png)
+
+![V4](/static/images/probar-hass/v4.png)
+
+![V5](/static/images/probar-hass/v5.png)
+
+![V6](/static/images/probar-hass/v6.png)
+
+## Configuración de la máquina virtual
+
+![V7](/static/images/probar-hass/v7.png)
+
+![V8](/static/images/probar-hass/v8.png)
+
+![V9](/static/images/probar-hass/v9.png)
+
+![V10](/static/images/probar-hass/v10.png).
+
+## Lista de comandos en Home Assistant
+
+![V11](/static/images/probar-hass/v11.png)
+
+1. Usuario para inicio de sesión: `root` (no requiere contraseña)
+2. Comando para ingresar al sistema: `login`
+3. Comando para visualizar IP de Home Assistant: `nmcli`
+
+Buscamos el adaptador por defecto y nos fijamos en la propiedad `inet4` que indica el número de IP (**la ip será diferente en cada sistema**).
+
+**Ejemplo:**
+
+![V12](/static/images/probar-hass/v12.png)
+
+- Con este dato, abrimos una pestaña en el navegador, escribimos la IP que encontramos en el paso anterior y agregamos el puerto 8123 (valor por defecto de home assistant) de la siguiente forma
+
+![V13](/static/images/probar-hass/v13.png)
+
+- Dependiendo de la velocidad de nuestra máquina, es probable que nos aparezca el siguiente mensaje:
+
+![V14](/static/images/probar-hass/v14.png)
+
+- Esto es normal, solo deben esperar con la venta abierta a que el sistema termine de cargar.
+
+![V15](/static/images/probar-hass/v15.png)
+
+- Cuando les aparezca esta página, significa que el sistema se encuentra listo y ya pueden iniciar la configuración inicial tal y como muestro en el video.

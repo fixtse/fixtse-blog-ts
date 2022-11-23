@@ -33,7 +33,7 @@ const genFrontMatter = (answers) => {
   const authorArray = answers.authors.length > 0 ? "'" + answers.authors.join("','") + "'" : ''
 
   let frontMatter = dedent`---
-  title: ${answers.title ? answers.title : 'Untitled'}
+  title: ${answers.title ? answers.title : 'Sin Título'}
   date: '${date}'
   tags: [${answers.tags ? tags : ''}]
   draft: ${answers.draft === 'yes' ? true : false}
@@ -44,7 +44,7 @@ const genFrontMatter = (answers) => {
   `
 
   if (answers.authors.length > 0) {
-    frontMatter = frontMatter + '\n' + `authors: [${authorArray}]`
+    frontMatter = frontMatter + '\n' + `autores: [${authorArray}]`
   }
 
   frontMatter = frontMatter + '\n---'
@@ -56,46 +56,46 @@ inquirer
   .prompt([
     {
       name: 'title',
-      message: 'Enter post title:',
+      message: 'Ingresa el título del post:',
       type: 'input',
     },
     {
       name: 'extension',
-      message: 'Choose post extension:',
+      message: 'Escoje la extensión:',
       type: 'list',
       choices: ['mdx', 'md'],
     },
     {
       name: 'authors',
-      message: 'Choose authors:',
+      message: 'Escoje los autores:',
       type: 'checkbox',
       choices: getAuthors,
     },
     {
       name: 'summary',
-      message: 'Enter post summary:',
+      message: 'Ingresa el resumen del post:',
       type: 'input',
     },
     {
       name: 'draft',
-      message: 'Set post as draft?',
+      message: 'Es borrador?',
       type: 'list',
       choices: ['yes', 'no'],
     },
     {
       name: 'tags',
-      message: 'Any Tags? Separate them with , or leave empty if no tags.',
+      message: 'Algún Tags? Separalos con , o déjalo vacío si no hay tags.',
       type: 'input',
     },
     {
       name: 'layout',
-      message: 'Select layout',
+      message: 'Selecciona el Modelo',
       type: 'list',
       choices: getLayouts,
     },
     {
       name: 'canonicalUrl',
-      message: 'Enter canonical url:',
+      message: 'Ingresa la url:',
       type: 'input',
     },
   ])
