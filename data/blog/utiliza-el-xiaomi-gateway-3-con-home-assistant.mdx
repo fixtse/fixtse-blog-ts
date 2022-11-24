@@ -1,0 +1,45 @@
+---
+title: Utiliza el Xiaomi Gateway 3 con Home Assistant
+date: '2021-09-14'
+tags: ['Xiaomi', 'Home Assistant', 'Zigbee', 'Bluetooth LE']
+draft: false
+summary: En este video les mostraré como utilizar el Xiaomi Gateway 3 desde Home Assistant, para poder utilizar todos tus sensores Zigbee y Bluetooth LE de la marca Xiaomi o Aqara de forma local y sin depender de la nube.
+images: []
+id: [Jr5oA2HTt24]
+layout: PostLayout
+canonicalUrl: xiaomi-gateway-3-con-home-assistant
+autores: ['default']
+---
+
+<p align="center">
+  <Image
+    class="object-center"
+    alt="XIAOMI GATEWAY 3"
+    src="/static/images/xiaomi-hass/v3.png"
+    width={350}
+    height={350}
+  />
+</p>
+
+En este video les mostraré como utilizar el Xiaomi Gateway 3 desde Home Assistant, para poder utilizar todos tus sensores Zigbee y Bluetooth LE de la marca Xiaomi o Aqara de forma local y sin depender de la nube.
+
+Comando para activar telnet en el Gateway:
+
+```jsx
+{"method":"set_ip_info","params":{"ssid":"\"\"","pswd":"123123 ; passwd -d admin ; echo enable > /sys/class/tty/tty/enable; telnetd"}}
+```
+
+Comando para instalar un firmware soportado por la [integración](https://github.com/AlexxIT/XiaomiGateway3) para Home Assistant:
+
+```bash
+wget -O /tmp/curl "http://master.dl.sourceforge.net/project/mgl03/bin/curl?viasf=1" && chmod +x /tmp/curl export PATH="$PATH:/tmp"
+curl -s -k -L -o /tmp/update.sh https://raw.githubusercontent.com/zvldz/mgl03_fw/main/firmware/mgl03_update.sh && sh /tmp/update.sh
+```
+
+**_Fuentes:_**
+
+Activar telnet: https://gist.github.com/zvldz/1bd6b21539f84339c218f9427e022709
+
+Script instalar firmware: https://github.com/zvldz/mgl03_fw/tree/main/firmware
+
+Repositorio integración para Home Assistant: https://github.com/AlexxIT/XiaomiGateway3
