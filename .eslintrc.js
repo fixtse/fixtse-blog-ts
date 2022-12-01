@@ -7,7 +7,15 @@ module.exports = {
     node: true,
     es6: true,
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'hexagonal-architecture'],
+  overrides: [
+    {
+      files: ['src/**/*.ts'],
+      rules: {
+        'hexagonal-architecture/enforce': ['error'],
+      },
+    },
+  ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
@@ -18,6 +26,7 @@ module.exports = {
     'next/core-web-vitals',
   ],
   rules: {
+    'no-var': 'error',
     'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/anchor-is-valid': [
@@ -28,11 +37,17 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
-    'react/prop-types': 0,
-    'no-unused-vars': 0,
-    'react/no-unescaped-entities': 0,
+    'react/prop-types': 'warn',
+    'no-unused-vars': 'warn',
+    'react/no-unescaped-entities': 'warn',
+    'simple-import-sort/exports': 'error',
+    'simple-import-sort/imports': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
+    'import/first': 'error',
+    'import/no-duplicates': 'error',
+    'import/no-unresolved': 'error',
+    'import/no-webpack-loader-syntax': 'error',
   },
 }

@@ -1,8 +1,9 @@
-import SocialIcon from '@/components/social-icons'
-import Image from '@/components/Image'
-import { PageSEO } from '@/components/SEO'
 import { ReactNode } from 'react'
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
+
+import Image from '@/components/Image'
+import { PageSEO } from '@/components/SEO'
+import SocialIcon from '@/components/social-icons'
 
 interface Props {
   children: ReactNode

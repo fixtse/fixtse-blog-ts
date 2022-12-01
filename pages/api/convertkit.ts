@@ -26,7 +26,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     if (response.status >= 400) {
       return res.status(400).json({
-        error: `There was an error subscribing to the list.`,
+        error: 'There was an error subscribing to the list.',
       })
     }
 

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import kebabCase from '@/lib/utils/kebabCase'
 
 interface Props {

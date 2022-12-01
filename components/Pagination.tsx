@@ -18,7 +18,7 @@ export default function Pagination({ totalPages, currentPage }: Props) {
           </button>
         )}
         {prevPage && (
-          <Link href={currentPage - 1 === 1 ? `/blog/` : `/blog/page/${currentPage - 1}`}>
+          <Link href={currentPage - 1 === 1 ? '/blog/' : `/blog/page/${currentPage - 1}`}>
             <button className="cursor-auto disabled:opacity-50" disabled={!prevPage}>
               Anterior
             </button>

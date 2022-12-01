@@ -29,6 +29,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
+        // @ts-ignore
         sans: ['Ubuntu', ...defaultTheme.fontFamily?.sans],
       },
       colors: {
