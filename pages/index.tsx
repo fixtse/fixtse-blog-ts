@@ -43,7 +43,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                       <dt className="sr-only">Publicado el</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>{formatDate(date)}</time>
-                        <PostImage image={images[0]} />
+                        <PostImage image={images[0]} slug={slug} />
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
