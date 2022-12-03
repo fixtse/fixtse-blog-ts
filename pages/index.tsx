@@ -1,11 +1,10 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 
-import Image from '@/components/Image'
 import Link from '@/components/Link'
+import PostImage from '@/components/PostImage'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
-import YouTube from '@/components/Youtube-min'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
@@ -35,7 +34,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No se encontró ningún artículo.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags, images, id } = frontMatter
+            const { slug, date, title, summary, tags, images } = frontMatter
             return (
               <li key={slug} className="py-12">
                 <article>
@@ -44,11 +43,11 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                       <dt className="sr-only">Publicado el</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>{formatDate(date)}</time>
-                        <YouTube id={id} />
+                        <PostImage image={images[0]} />
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
+                      <div className="space-y-3">
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
