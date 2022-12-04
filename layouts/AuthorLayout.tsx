@@ -24,13 +24,16 @@ export default function AuthorLayout({ children, frontMatter }: Props) {
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="flex flex-col items-center space-x-2 pt-8">
-            <Image
-              src={avatar}
-              alt="avatar"
-              width="192px"
-              height="192px"
-              className="h-48 w-48 rounded-full"
-            />
+            <div className="group relative">
+              <div className="animate-tilt absolute -inset-1.5 rounded-full bg-gradient-to-r from-cyan-600 to-primary-600 opacity-100 blur"></div>
+              <Image
+                src={avatar}
+                alt="avatar"
+                width="192px"
+                height="192px"
+                className="h-48 w-48 rounded-full"
+              />
+            </div>
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>

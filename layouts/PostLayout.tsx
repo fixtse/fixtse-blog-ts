@@ -75,13 +75,16 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   {authorDetails.map((author) => (
                     <li className="flex items-center space-x-2" key={author.name}>
                       {author.avatar && (
-                        <Image
-                          src={author.avatar}
-                          width="38px"
-                          height="38px"
-                          alt="avatar"
-                          className="h-10 w-10 rounded-full"
-                        />
+                        <div className="group relative">
+                          <div className="animate-tilt absolute -inset-0.5 rounded-full bg-gradient-to-r from-cyan-600 to-primary-600 opacity-100 blur"></div>
+                          <Image
+                            src={author.avatar}
+                            width="38px"
+                            height="38px"
+                            alt="avatar"
+                            className="h-10 w-10 rounded-full"
+                          />
+                        </div>
                       )}
                       <dl className="whitespace-nowrap text-sm font-medium leading-5">
                         <dt className="sr-only">Nombre</dt>
