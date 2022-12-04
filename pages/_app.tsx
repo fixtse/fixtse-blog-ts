@@ -3,6 +3,7 @@ import '@/css/prism.css'
 import 'katex/dist/katex.css'
 import '@fontsource/ubuntu'
 
+//import { Analytics } from '@vercel/analytics/react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ThemeProvider } from 'next-themes'
@@ -22,9 +23,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
-      <Analytics />
       <LayoutWrapper>
         <Component {...pageProps} />
+        <Analytics />
       </LayoutWrapper>
     </ThemeProvider>
   )

@@ -12,7 +12,7 @@ export default function Footer() {
           <SocialIcon kind="instagram" href={siteMetadata.instagram} size={8} />
           <SocialIcon kind="github" href={siteMetadata.github} size={8} />
           <SocialIcon kind="twitter" href={siteMetadata.twitter} size={8} />
-          <SocialIcon kind="rss" href={siteMetadata.twitter} size={8} />
+          <SocialIcon kind="rss" href={siteMetadata.rss} size={8} />
         </div>
 
         <div className="group relative mb-3 mt-1">
