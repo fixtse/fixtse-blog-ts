@@ -3,12 +3,13 @@ import '@/css/prism.css'
 import 'katex/dist/katex.css'
 import '@fontsource/ubuntu'
 
-//import { Analytics } from '@vercel/analytics/react'
+// eslint-disable-next-line import/no-unresolved
+import { Analytics } from '@vercel/analytics/react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ThemeProvider } from 'next-themes'
 
-import Analytics from '@/components/analytics'
+//import Analytics from '@/components/analytics'
 import { ClientReload } from '@/components/ClientReload'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import siteMetadata from '@/data/siteMetadata'
