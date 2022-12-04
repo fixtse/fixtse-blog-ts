@@ -22,7 +22,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="mx-auto max-w-6xl divide-y  divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Reciente
@@ -31,14 +31,17 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             {siteMetadata.description}
           </p>
         </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+        <ul className="divide-y divide-gray-200 rounded-lg dark:divide-gray-700">
           {!posts.length && 'No se encontró ningún artículo.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags, images } = frontMatter
             return (
-              <li key={slug} className="py-12">
+              <li
+                key={slug}
+                className="rounded-lg py-8 px-4 transition duration-300 hover:rounded-xl hover:bg-gray-200 dark:hover:bg-gray-800"
+              >
                 <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0 ">
                     <dl>
                       <dt className="sr-only">Publicado el</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
@@ -59,7 +62,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                           </h2>
                           <div className="flex flex-wrap">
                             {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
+                              <Tag key={tag} text={tag} num={0} />
                             ))}
                           </div>
                         </div>

@@ -23,7 +23,7 @@ function ThemedImage() {
       width={230}
       height={92}
       alt="FixtSE Logo"
-      className="object-cover object-center md:h-36 lg:h-48"
+      className="rounded-lg object-cover object-center transition duration-500 md:h-36 lg:h-48"
     />
   )
 }

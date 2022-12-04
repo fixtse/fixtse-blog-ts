@@ -16,7 +16,8 @@ const siteMetadata = {
   facebook: 'https://facebook.com',
   youtube: 'https://www.youtube.com/channel/UCOY6oNxodGWbFg6CjXtae5g',
   linkedin: 'https://www.linkedin.com',
-  instagram: 'https://instagram.com/fixtse',
+  instagram: 'https://instagram.com/fixt.se',
+  rss: '/feed.xml',
   locale: 'es-ES',
   analytics: {
     // If you want to use an analytics provider you have to add it to the

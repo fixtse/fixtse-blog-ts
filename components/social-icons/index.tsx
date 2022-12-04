@@ -3,6 +3,7 @@ import Github from './github.svg'
 import Instagram from './instagram.svg'
 import Linkedin from './linkedin.svg'
 import Mail from './mail.svg'
+import RSS from './rss.svg'
 import Twitter from './twitter.svg'
 import Youtube from './youtube.svg'
 
@@ -16,6 +17,7 @@ const components = {
   linkedin: Linkedin,
   twitter: Twitter,
   instagram: Instagram,
+  rss: RSS,
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {
@@ -33,7 +35,7 @@ const SocialIcon = ({ kind, href, size = 8 }) => {
     >
       <span className="sr-only">{kind}</span>
       <SocialSvg
-        className={`fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 h-${size} w-${size}`}
+        className={`fill-current text-gray-700 transition duration-500 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 h-${size} w-${size}`}
       />
     </a>
   )

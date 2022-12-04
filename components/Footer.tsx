@@ -7,19 +7,24 @@ export default function Footer() {
   return (
     <footer>
       <div className="mt-16 flex flex-col items-center">
-        <div className="mb-3 flex items-center space-x-4">
-          <SocialIcon kind="instagram" href={siteMetadata.instagram} size={6} />
-          <SocialIcon kind="youtube" href={siteMetadata.youtube} size={6} />
-          <SocialIcon kind="github" href={siteMetadata.github} size={6} />
-          <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} />
-          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
+        <div className="mb-3 flex space-x-4">
+          <SocialIcon kind="youtube" href={siteMetadata.youtube} size={8} />
+          <SocialIcon kind="instagram" href={siteMetadata.instagram} size={8} />
+          <SocialIcon kind="github" href={siteMetadata.github} size={8} />
+          <SocialIcon kind="twitter" href={siteMetadata.twitter} size={8} />
+          <SocialIcon kind="rss" href={siteMetadata.rss} size={8} />
         </div>
-        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          <div>{siteMetadata.author}</div>
-          <div>{' • '}</div>
-          <div>{`© ${new Date().getFullYear()}`}</div>
+
+        <div className="group relative mb-3 mt-1">
+          <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-fuchsia-600 to-primary-600 opacity-50 blur transition duration-500"></div>
+          <div className="relative  flex space-x-2 text-sm font-semibold text-gray-800 dark:text-gray-200">
+            <div>{siteMetadata.author}</div>
+            <div>{' • '}</div>
+            <div>{`© ${new Date().getFullYear()}`}</div>
+          </div>
         </div>
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
+
+        <div className="mb-8 text-sm text-gray-500 transition duration-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400">
           <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
             Tailwind Nextjs Theme
           </Link>

@@ -13,7 +13,7 @@ const PostImage: FC<{ image: string; slug: string }> = ({ image, slug }) => {
           height={85}
           alt="illustration"
           layout="responsive"
-          className="rounded object-cover"
+          className="rounded-lg object-fill"
         />
       </Link>
     </div>
