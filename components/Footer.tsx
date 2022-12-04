@@ -12,7 +12,7 @@ export default function Footer() {
           <SocialIcon kind="instagram" href={siteMetadata.instagram} size={8} />
           <SocialIcon kind="github" href={siteMetadata.github} size={8} />
           <SocialIcon kind="twitter" href={siteMetadata.twitter} size={8} />
-          <SocialIcon kind="rss" href={siteMetadata.rss} size={8} />
+          <SocialIcon kind="rss" href={siteMetadata.twitter} size={8} />
         </div>
 
         <div className="group relative mb-3 mt-1">
@@ -22,12 +22,6 @@ export default function Footer() {
             <div>{' • '}</div>
             <div>{`© ${new Date().getFullYear()}`}</div>
           </div>
-        </div>
-
-        <div className="mb-8 text-sm text-gray-500 transition duration-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400">
-          <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
-            Tailwind Nextjs Theme
-          </Link>
         </div>
       </div>
     </footer>
