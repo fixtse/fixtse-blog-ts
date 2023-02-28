@@ -14,9 +14,9 @@ const siteMetadata = {
   github: 'https://github.com/fixtse',
   twitter: 'https://twitter.com/fixtse',
   facebook: 'https://facebook.com',
-  youtube: 'https://www.youtube.com/channel/UCOY6oNxodGWbFg6CjXtae5g',
+  youtube: 'https://www.youtube.com/@fixtse240',
   linkedin: 'https://www.linkedin.com',
-  instagram: 'https://instagram.com/fixt.se',
+  instagram: 'https://instagram.com/fixtse',
   rss: '/feed.xml',
   locale: 'es-ES',
   analytics: {
