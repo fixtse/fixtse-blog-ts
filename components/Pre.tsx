@@ -28,7 +28,7 @@ const Pre = ({ children }: Props) => {
     <div ref={textInput} onMouseEnter={onEnter} onMouseLeave={onExit} className="relative">
       {hovered && (
         <button
-          aria-label="Copia el código"
+          aria-label="Copy code"
           type="button"
           className={`absolute right-2 top-2 h-8 w-8 rounded border-2 bg-gray-700 p-1 dark:bg-gray-800 ${
             copied

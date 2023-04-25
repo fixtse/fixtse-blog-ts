@@ -13,17 +13,17 @@ export default function FourZeroFour() {
           <span role="img" aria-label="sheep">
             ☹️
           </span>{' '}
-          no pudimos encontrar lo que buscabas
+          Sorry we couldn't find this page.
         </p>
         <p className="mb-8">
-          Pero no te preocupes, puedes encontrar muchas otras cosas en nuestra página principal{' '}
+          But dont worry, you can find plenty of other things on our homepage.{' '}
           <span role="img" aria-label="sheep">
             😁😁😁
           </span>
         </p>
         <Link href="/">
           <button className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 hover:bg-blue-700 focus:outline-none dark:hover:bg-blue-500">
-            Regresa a la Página Principal
+            Back to homepage
           </button>
         </Link>
       </div>

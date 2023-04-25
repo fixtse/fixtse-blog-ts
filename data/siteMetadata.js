@@ -2,8 +2,8 @@ const siteMetadata = {
   title: 'FixtSE',
   author: 'Fixt',
   headerTitle: 'FixtSE',
-  description: '',
-  language: 'es-es',
+  description: 'A blog about smart home technology and DYI projects.',
+  language: 'en-US',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://fixtse.com',
   siteRepo: 'https://github.com/fixtse/fixtse-blog-ts',
@@ -18,7 +18,7 @@ const siteMetadata = {
   linkedin: 'https://www.linkedin.com',
   instagram: 'https://instagram.com/fixtse',
   rss: '/feed.xml',
-  locale: 'es-ES',
+  locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
