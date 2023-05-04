@@ -1,0 +1,92 @@
+---
+title: Automate your Windows PC with Home Assistant and HASS Agent
+date: '2023-05-04'
+tags: ['HASS Agent', 'Home Assistant', 'Tutorial']
+draft: false
+summary: Guide for anyone who wants to automate tasks on their PC using HASS.Agent and Home Assistant. It’s easy to follow and provides step-by-step instructions on how to install HASS.Agent and integrate it with Home Assistant.
+images: ['/static/images/v1.jpg']
+id: ['CzcycaVvO-U']
+layout: PostLayout
+canonicalUrl: hass-agent
+autores: ['default']
+---
+
+<TOCInline toc={props.toc} toHeading={2} asDisclosure />
+
+## Download links
+
+HASS Agent: https://github.com/LAB02-Research/HASS.Agent/releases
+
+![HASS Agent Installer](/static/images/hass-agent/installer-download.png)
+
+## MQTT installation (Mosquitto Broker)
+
+First, go to setting in the Home Assistant menu.
+
+![i1](/static/images/hass-agent/i1.png)
+
+Then click on addons
+
+![i2](/static/images/hass-agent/i2.png)
+
+Click on the add-on store icon in the bottom right corner
+
+![i3](/static/images/hass-agent/i3.png)
+
+Search for the Mosquitto broker add-on and click on it, then click on install
+
+![i4](/static/images/hass-agent/i4.png)
+
+![i5](/static/images/hass-agent/i5.png)
+
+After it's finished, click on start
+
+![i6](/static/images/hass-agent/i6.png)
+
+Now we are going to configure the MQTT integration in home assistant, for this, go to setting in the Home Assistant menu and then click on Devices & Services
+
+![i7](/static/images/hass-agent/i7.png)
+
+Click on the Configure button for the MQTT integration and then click on Submit
+
+![i8](/static/images/hass-agent/i8.png)
+
+![i9](/static/images/hass-agent/i9.png)
+
+if everything went well, you should see the following message
+
+![i10](/static/images/hass-agent/i10.png)
+
+if not, reboot home assistant and try again
+
+## HASS Agent configuration
+
+For the most updated configuration, please refer to the official HASS.Agent documentation: https://hassagent.readthedocs.io/en/latest/configuration/
+
+## Generate API Token
+
+Go to your profile in Home Assistant (bottom left corner, bellow notifications).
+
+Scroll down to the end of the page and click on Create Token
+
+![i11](/static/images/hass-agent/i11.png)
+
+Give it a name and copy it to the HASS.Agent configuration
+
+## Commands configuration
+
+https://hassagent.readthedocs.io/en/latest/commands/command-basics/
+
+## HASS Agent custom integration
+
+https://hassagent.readthedocs.io/en/latest/integration/installation/
+
+## Media Player Usage
+
+https://hassagent.readthedocs.io/en/latest/mediaplayer/mediaplayer-usage-and-examples/
+
+## Notifications Usage
+
+https://hassagent.readthedocs.io/en/latest/notifications/notification-usage-and-examples/
+
+I hope this was helpfull for you, if you have any questions, please let me know in the comments bellow.
