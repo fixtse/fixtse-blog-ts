@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 
 import siteMetadata from '@/data/siteMetadata'
 
-const NewsletterForm = ({ title = 'Subscríbete a nuestro boletin informativo' }) => {
+const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
   const inputEl = useRef<HTMLInputElement>(null)
   const [error, setError] = useState(false)
   const [message, setMessage] = useState('')
@@ -24,14 +24,14 @@ const NewsletterForm = ({ title = 'Subscríbete a nuestro boletin informativo' }
     const { error } = await res.json()
     if (error) {
       setError(true)
-      setMessage('Tu correo electrónico es inválido o ya te encuentras inscríto!')
+      setMessage('Your e-mail address is invalid or you are already subscribed!')
       return
     }
 
     inputEl.current.value = ''
     setError(false)
     setSubscribed(true)
-    setMessage('🎉 Ya estás suscrito.')
+    setMessage('Successfully! 🎉 You are now subscribed.')
   }
 
   return (
@@ -40,14 +40,14 @@ const NewsletterForm = ({ title = 'Subscríbete a nuestro boletin informativo' }
       <form className="flex flex-col sm:flex-row" onSubmit={subscribe}>
         <div>
           <label className="sr-only" htmlFor="email-input">
-            Correo electrónico
+            Email address
           </label>
           <input
             autoComplete="email"
             className="w-72 rounded-md px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black"
             id="email-input"
             name="email"
-            placeholder={subscribed ? 'Ya estás suscrito  🎉' : 'Ingresa tu email'}
+            placeholder={subscribed ? "You're subscribed !  🎉" : 'Enter your email'}
             ref={inputEl}
             required
             type="email"
@@ -62,7 +62,7 @@ const NewsletterForm = ({ title = 'Subscríbete a nuestro boletin informativo' }
             type="submit"
             disabled={subscribed}
           >
-            {subscribed ? 'Gracias!' : 'Inscríbete'}
+            {subscribed ? 'Thank you!' : 'Sign up'}
           </button>
         </div>
       </form>
