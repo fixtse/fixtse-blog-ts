@@ -47,6 +47,9 @@ dependencies:
   js-yaml:
     specifier: ^4.1.0
     version: 4.1.0
+  katex:
+    specifier: ^0.16.7
+    version: 0.16.7
   mdast-util-to-string:
     specifier: ^3.2.0
     version: 3.2.0

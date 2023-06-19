@@ -1,6 +1,7 @@
 import '@/css/prism.css'
 import '@/css/tailwind.css'
 import '@fontsource/ubuntu'
+import 'katex/dist/katex.css'
 
 // eslint-disable-next-line import/no-unresolved
 import { Analytics } from '@vercel/analytics/react'
