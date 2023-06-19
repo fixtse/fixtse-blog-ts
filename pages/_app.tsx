@@ -1,6 +1,5 @@
-import '@/css/tailwind.css'
 import '@/css/prism.css'
-import 'katex/dist/katex.css'
+import '@/css/tailwind.css'
 import '@fontsource/ubuntu'
 
 // eslint-disable-next-line import/no-unresolved
@@ -18,16 +17,16 @@ const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
 export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
-      <Head>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-      </Head>
-      {isDevelopment && isSocket && <ClientReload />}
-      <LayoutWrapper>
-        <Component {...pageProps} />
-        <Analytics />
-      </LayoutWrapper>
-    </ThemeProvider>
-  )
+	return (
+		<ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
+			<Head>
+				<meta content="width=device-width, initial-scale=1" name="viewport" />
+			</Head>
+			{isDevelopment && isSocket && <ClientReload />}
+			<LayoutWrapper>
+				<Component {...pageProps} />
+				<Analytics />
+			</LayoutWrapper>
+		</ThemeProvider>
+	)
 }

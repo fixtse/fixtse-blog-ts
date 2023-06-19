@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import fs from 'fs'
 import matter from 'gray-matter'
 import { bundleMDX } from 'mdx-bundler'
