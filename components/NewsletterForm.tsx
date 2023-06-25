@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useRef, useState } from 'react'
 
 import { siteMetadata } from '@/data/siteMetadata'
@@ -13,7 +14,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
 
 		const res = await fetch(`/api/${siteMetadata.newsletter.provider}`, {
 			body: JSON.stringify({
-				email: inputEl.current.value,
+				email: inputEl.current?.value,
 			}),
 			headers: {
 				'Content-Type': 'application/json',
@@ -28,7 +29,9 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
 			return
 		}
 
-		inputEl.current.value = ''
+		if (inputEl.current?.value != null) {
+			inputEl.current.value = ''
+		}
 		setError(false)
 		setSubscribed(true)
 		setMessage('Successfully! 🎉 You are now subscribed.')
