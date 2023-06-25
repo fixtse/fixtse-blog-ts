@@ -1,6 +1,6 @@
 import { PostFrontMatter } from 'types/PostFrontMatter'
 
-import siteMetadata from '@/data/siteMetadata'
+import { siteMetadata } from '@/data/siteMetadata'
 import { escape } from '@/lib/utils/htmlEscaper'
 
 const generateRssItem = (post: PostFrontMatter) => `

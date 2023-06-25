@@ -2,7 +2,7 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ComponentProps } from 'react'
 
 import { PageSEO } from '@/components/SEO'
-import siteMetadata from '@/data/siteMetadata'
+import { siteMetadata } from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 

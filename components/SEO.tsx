@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 
-import siteMetadata from '@/data/siteMetadata'
+import { siteMetadata } from '@/data/siteMetadata'
 
 interface CommonSEOProps {
 	title: string

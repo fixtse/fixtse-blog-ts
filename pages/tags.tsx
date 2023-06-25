@@ -2,7 +2,7 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next'
 
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
+import { siteMetadata } from '@/data/siteMetadata'
 import { getAllTags } from '@/lib/tags'
 
 export const getStaticProps: GetStaticProps<{ tags: Record<string, number> }> = async () => {

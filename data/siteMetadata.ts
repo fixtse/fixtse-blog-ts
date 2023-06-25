@@ -1,4 +1,4 @@
-const siteMetadata = {
+export const siteMetadata = {
 	title: 'FixtSE',
 	author: 'Fixt',
 	headerTitle: 'FixtSE',
@@ -19,15 +19,6 @@ const siteMetadata = {
 	instagram: 'https://instagram.com/fixtse',
 	rss: '/feed.xml',
 	locale: 'en-US',
-	analytics: {
-		// If you want to use an analytics provider you have to add it to the
-		// content security policy in the `next.config.js` file.
-		// supports plausible, simpleAnalytics, umami or googleAnalytics
-		plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
-		simpleAnalytics: false, // true or false
-		umamiWebsiteId: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
-		googleAnalyticsId: 'G-E1YB07Q8KJ', // e.g. UA-000000-2 or G-XXXXXXX
-	},
 	newsletter: {
 		// supports mailchimp, buttondown, convertkit, klaviyo
 		// Please add your .env file and modify it according to your selection
@@ -42,7 +33,7 @@ const siteMetadata = {
 		giscusConfig: {
 			// Visit the link below, and follow the steps in the 'configuration' section
 			// https://giscus.app/
-			repo: process.env.NEXT_PUBLIC_GISCUS_REPO,
+			repo: process.env.NEXT_PUBLIC_GISCUS_REPO as `${string}/${string}`,
 			repositoryId: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
 			category: process.env.NEXT_PUBLIC_GISCUS_CATEGORY,
 			categoryId: process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID,
@@ -52,31 +43,13 @@ const siteMetadata = {
 			metadata: '0',
 			// theme example: light, dark, dark_dimmed, dark_high_contrast
 			// transparent_dark, preferred_color_scheme, custom
-			theme: 'light',
+			theme: 'dark_dimmed',
 			// theme when dark mode
-			darkTheme: 'transparent_dark',
+			darkTheme: 'dark_dimmed',
 			// If the theme option above is set to 'custom`
 			// please provide a link below to your custom theme css file.
 			// example: https://giscus.app/themes/custom_example.css
 			themeURL: '',
 		},
-		utterancesConfig: {
-			// Visit the link below, and follow the steps in the 'configuration' section
-			// https://utteranc.es/
-			repo: process.env.NEXT_PUBLIC_UTTERANCES_REPO,
-			issueTerm: '', // supported options: pathname, url, title
-			label: '', // label (optional): Comment 💬
-			// theme example: github-light, github-dark, preferred-color-scheme
-			// github-dark-orange, icy-dark, dark-blue, photon-dark, boxy-light
-			theme: '',
-			// theme when dark mode
-			darkTheme: '',
-		},
-		disqusConfig: {
-			// https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-			shortname: process.env.NEXT_PUBLIC_DISQUS_SHORTNAME,
-		},
 	},
 }
-
-module.exports = siteMetadata

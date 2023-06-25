@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 
-import Comments from '@/components/comments'
+import Comment from '@/components/Comment'
 import Image from '@/components/Image'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
@@ -11,7 +11,7 @@ import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import YouTube from '@/components/Youtube'
-import siteMetadata from '@/data/siteMetadata'
+import { siteMetadata } from '@/data/siteMetadata'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/tree/main/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -116,7 +116,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
 								{` • `}
 								<Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
 							</div>
-							<Comments frontMatter={frontMatter} />
+							<Comment />
 						</div>
 						<footer>
 							<div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">

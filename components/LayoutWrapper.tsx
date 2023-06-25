@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 
 import LogoImage from '@/components/ThemedImage'
 import headerNavLinks from '@/data/headerNavLinks'
-import siteMetadata from '@/data/siteMetadata'
+import { siteMetadata } from '@/data/siteMetadata'
 
 import Footer from './Footer'
 import Link from './Link'

@@ -1,6 +1,10 @@
+//import i18nConfig from './next-i18next.config.js'
+
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
 	enabled: process.env.ANALYZE === 'true',
 })
+
+//const { i18n } = i18nConfig
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
@@ -100,4 +104,5 @@ module.exports = withBundleAnalyzer({
 
 		return config
 	},
+	//	i18n,
 })

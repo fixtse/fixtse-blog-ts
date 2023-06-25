@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 
 import { PageSEO } from '@/components/SEO'
-import siteMetadata from '@/data/siteMetadata'
+import { siteMetadata } from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 
@@ -61,7 +61,7 @@ export default function PostPage({
 				posts={posts}
 				initialDisplayPosts={initialDisplayPosts}
 				pagination={pagination}
-				title="Todos los artículos"
+				title="All Articles"
 			/>
 		</>
 	)
