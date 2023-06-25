@@ -1,4 +1,4 @@
-import NextImage, { ImageProps } from 'next/image'
+import NextImage, { ImageProps } from 'next/legacy/image'
 
 const Image = ({ ...rest }: ImageProps) => <NextImage {...rest} />
 
