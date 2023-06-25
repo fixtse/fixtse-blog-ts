@@ -8,6 +8,16 @@ module.exports = {
 		es6: true,
 	},
 	plugins: ['@typescript-eslint', 'simple-import-sort', 'hexagonal-architecture'],
+	settings: {
+		// Support absolute imports
+		// https://www.npmjs.com/package/eslint-import-resolver-alias
+		'import/resolver': {
+			alias: {
+				map: [['@', './src']],
+				extensions: ['.js', '.jsx', '.ts', '.tsx'],
+			},
+		},
+	},
 	overrides: [
 		{
 			files: ['src/**/*.ts'],
