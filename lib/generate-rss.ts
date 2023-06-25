@@ -10,7 +10,7 @@ const generateRssItem = (post: PostFrontMatter) => `
     <link>${siteMetadata.siteUrl}/blog/${post.slug}</link>
     ${post.summary && `<description>${escape(post.summary)}</description>`}
     <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-    <author>${siteMetadata.email} (${siteMetadata.author})</author>
+    <author>${siteMetadata.author}</author>
     ${post.tags && post.tags.map((t) => `<category>${t}</category>`).join('')}
   </item>
 `
