@@ -1,0 +1,36 @@
+---
+title: How to integrate Spotify in to Home Assistant
+date: '2023-06-26'
+tags: ['Spotify', 'Home Assistant', 'Tutorial','Integration']
+draft: false
+summary: Guide to integrate your spotify account into home assistant. It’s easy to follow and provides step-by-step instructions 
+images: ['/static/images/thumbnails/v2.jpg']
+id: [498Ju8BGdTA]
+layout: PostLayout
+canonicalUrl: spotify-integration
+autores: ['default']
+---
+
+# Spotify Integration
+<center><a href="https://my.home-assistant.io/redirect/config_flow_start?domain=spotify" target="_blank" rel="noopener"><img src="https://my.home-assistant.io/badges/config_flow_start.svg" alt="Open your Home Assistant and show de integration menu" /></a></center>
+
+1. [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
+1. [Home Assistant Documentation](https://www.home-assistant.io/integrations/spotify/)
+
+**_Redirect URI:_**
+```
+https://my.home-assistant.io/redirect/oauth
+```
+
+# Spodcast Configuration:
+1. [Documentation](https://github.com/fondberg/spotcast/blob/master/README.md)
+ ```yaml
+ spotcast:
+  sp_dc: !secret sp_dc
+  sp_key: !secret sp_key
+  country: SE #optional, added in 3.6.24
+ ``` 
+
+
+
+
