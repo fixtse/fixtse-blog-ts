@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 
 import { PageSEO } from '@/components/SEO'
-import { siteMetadata } from '@/data/siteMetadata'
+import { siteMetadata } from '@/config/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { PostFrontMatter } from '@/types/PostFrontMatter'

@@ -1,3 +1,4 @@
+// eslint-disable-next-line hexagonal-architecture/enforce
 export type PostFrontMatter = {
 	title: string
 	date: string
