@@ -11,6 +11,8 @@ export default function CustomImage({ src, height, width, base64, alt, ...otherP
 		)
 	}
 	if (width && width > '50' && height && height == width) {
+		width = width / 2
+		height = height / 2
 		return (
 			<>
 				<div
@@ -23,8 +25,7 @@ export default function CustomImage({ src, height, width, base64, alt, ...otherP
 						src={src}
 						alt={alt}
 						width={width}
-						height={0}
-						style={{ width: '50%', height: '50%' }}
+						height={height}
 						sizes="100vw"
 						className="rounded-lg"
 						placeholder={base64 ? 'blur' : 'empty'}
@@ -47,8 +48,7 @@ export default function CustomImage({ src, height, width, base64, alt, ...otherP
 					src={src}
 					alt={alt}
 					width={width}
-					height={0}
-					style={{ width: 'auto', height: 'auto' }}
+					height={height}
 					sizes="100vw"
 					className="rounded-lg"
 					placeholder={base64 ? 'blur' : 'empty'}
