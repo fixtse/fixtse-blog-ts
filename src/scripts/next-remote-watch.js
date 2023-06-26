@@ -16,7 +16,7 @@ const next = require('next')
 const path = require('path')
 const { parse } = require('url')
 
-const pkg = require('../package.json')
+const pkg = require('../../package.json')
 
 const defaultWatchEvent = 'change'
 

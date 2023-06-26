@@ -8,6 +8,7 @@ import { Analytics } from '@vercel/analytics/react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { appWithTranslation } from 'next-i18next'
 import { ThemeProvider } from 'next-themes'
 import NProgress from 'nprogress'
 import { useEffect } from 'react'
@@ -16,11 +17,13 @@ import { ClientReload } from '@/components/ClientReload'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { siteMetadata } from '@/config/siteMetadata'
 
+import nextI18nConfig from '../../next-i18next.config'
+
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 NProgress.configure({ showSpinner: false })
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
 	const router = useRouter()
 
 	useEffect(() => {
@@ -43,3 +46,5 @@ export default function App({ Component, pageProps }: AppProps) {
 		</ThemeProvider>
 	)
 }
+
+export default appWithTranslation(App, nextI18nConfig)

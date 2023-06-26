@@ -1,8 +1,8 @@
 import { ComponentProps, useState } from 'react'
 
 import Link from '@/components/Link'
+import Image from '@/components/ListImage'
 import Pagination from '@/components/Pagination'
-import PostImage from '@/components/PostImage'
 import Tag from '@/components/Tag'
 import formatDate from '@/lib/utils/formatDate'
 import { PostFrontMatter } from '@/types/PostFrontMatter'
@@ -70,7 +70,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
 										<dt className="sr-only">Published on</dt>
 										<dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
 											<time dateTime={date}>{formatDate(date)}</time>
-											<PostImage image={images[0]} slug={slug} />
+											<Image image={images[0]} slug={slug} />
 										</dd>
 									</dl>
 									<div className="space-y-3 xl:col-span-3">

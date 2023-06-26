@@ -1,7 +1,7 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 
 import Link from '@/components/Link'
-import PostImage from '@/components/PostImage'
+import Image from '@/components/ListImage'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import { siteMetadata } from '@/config/siteMetadata'
@@ -46,7 +46,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
 											<dt className="sr-only">Published on</dt>
 											<dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
 												<time dateTime={date}>{formatDate(date)}</time>
-												<PostImage image={images[0]} slug={slug} />
+												<Image image={images[0]} slug={slug} />
 											</dd>
 										</dl>
 										<div className="space-y-5 xl:col-span-3">

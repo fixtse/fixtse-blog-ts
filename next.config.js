@@ -59,16 +59,14 @@ const securityHeaders = [
  **/
 module.exports = withBundleAnalyzer({
 	typescript: {
-		// !! WARN !!
 		// Dangerously allow production builds to successfully complete even if
 		// your project has type errors.
-		// !! WARN !!
 		ignoreBuildErrors: true,
 	},
 	reactStrictMode: true,
 	pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 	eslint: {
-		dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
+		dirs: ['src/pages', 'src/components', 'src/lib', 'src/scripts', 'src/types', 'src/layouts'],
 	},
 	async headers() {
 		return [
@@ -108,6 +106,9 @@ module.exports = withBundleAnalyzer({
 		}
 
 		return config
+	},
+	images: {
+		formats: ['image/avif', 'image/webp'],
 	},
 	i18n,
 })

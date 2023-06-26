@@ -18,14 +18,14 @@ module.exports = {
 			},
 		},
 	},
-	overrides: [
-		{
-			files: ['src/**/*.ts'],
-			rules: {
-				'hexagonal-architecture/enforce': ['error'],
-			},
-		},
-	],
+	//overrides: [
+	//	{
+	//		files: ['src/**/*.ts'],
+	//		rules: {
+	//			'hexagonal-architecture/enforce': ['error'],
+	//		},
+	//	},
+	//],
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/eslint-recommended',

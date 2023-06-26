@@ -1,23 +1,61 @@
-import { FC } from 'react'
+import Image, { ImageProps } from 'next/image'
 
-import Image from '@/components/Image'
-import Link from '@/components/Link'
+type Props = ImageProps & { base64?: string }
 
-const PostImage: FC<{ image: string; slug: string }> = ({ image, slug }) => {
+export default function CustomImage({ src, height, width, base64, alt, ...otherProps }: Props) {
+	if (!src) return null
+	if (typeof src === 'string' && (!height || !width)) {
+		return (
+			// eslint-disable-next-line @next/next/no-img-element
+			<img src={src} height={height} width={width} alt={alt} {...otherProps} />
+		)
+	}
+	if (width && width > '50' && height && height == width) {
+		return (
+			<>
+				<div
+					style={{
+						display: 'flex',
+						justifyContent: 'center',
+					}}
+				>
+					<Image
+						src={src}
+						alt={alt}
+						width={width}
+						height={0}
+						style={{ width: '50%', height: '50%' }}
+						sizes="100vw"
+						className="rounded-lg"
+						placeholder={base64 ? 'blur' : 'empty'}
+						blurDataURL={base64}
+						{...otherProps}
+					/>
+				</div>
+			</>
+		)
+	}
 	return (
-		<div className="px-4 pt-2 xl:row-span-2">
-			<Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
+		<>
+			<div
+				style={{
+					display: 'flex',
+					justifyContent: 'center',
+				}}
+			>
 				<Image
-					src={image}
-					width={150}
-					height={85}
-					alt="illustration"
-					layout="responsive"
-					className="rounded-lg object-fill"
+					src={src}
+					alt={alt}
+					width={width}
+					height={0}
+					style={{ width: 'auto', height: 'auto' }}
+					sizes="100vw"
+					className="rounded-lg"
+					placeholder={base64 ? 'blur' : 'empty'}
+					blurDataURL={base64}
+					{...otherProps}
 				/>
-			</Link>
-		</div>
+			</div>
+		</>
 	)
 }
-
-export default PostImage

@@ -16,6 +16,7 @@ import remarkFootnotes from 'remark-footnotes'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 
+import imageMetadata from '@/lib/utils/imageMetadata'
 // Remark packages
 import { AuthorFrontMatter } from '@/types/AuthorFrontMatter'
 import { PostFrontMatter } from '@/types/PostFrontMatter'
@@ -65,7 +66,7 @@ export async function getFileBySlug<T>(type: 'authors' | 'blog', slug: string | 
 	const { code, frontmatter } = await bundleMDX({
 		source,
 		// mdx imports can be automatically source from the components directory
-		cwd: path.join(root, 'components'),
+		//cwd: path.join(root, 'components'),
 		xdmOptions(options, frontmatter) {
 			// this is the recommended way to add custom remark/rehype plugins:
 			// The syntax might look weird, but it protects you in case we add/remove
@@ -88,6 +89,7 @@ export async function getFileBySlug<T>(type: 'authors' | 'blog', slug: string | 
 				[rehypeCitation, { path: path.join(root, 'data') }],
 				[rehypePrismPlus, { ignoreMissing: true }],
 				rehypePresetMinify,
+				imageMetadata,
 			]
 			return options
 		},

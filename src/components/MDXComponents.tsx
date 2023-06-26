@@ -2,9 +2,9 @@
 import { ComponentMap, getMDXComponent } from 'mdx-bundler/client'
 import React, { useMemo } from 'react'
 
-import Image from './Image'
 import CustomLink from './Link'
 import { BlogNewsletterForm } from './NewsletterForm'
+import Image from './PostImage'
 import Pre from './Pre'
 import TOCInline from './TOCInline'
 import YouTube from './Youtube'
