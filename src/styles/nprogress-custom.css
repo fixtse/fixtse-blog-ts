@@ -62,3 +62,19 @@
   opacity: 1;
   left: 0;
 }
+
+.row {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.column {
+  width:100%;
+  padding:1rem;
+}
+
+@media (min-width:768px) {
+  .column {
+    width: 50%;
+  }
+}
