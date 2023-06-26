@@ -13,4 +13,5 @@ export type PostFrontMatter = {
 	slug: string
 	fileName: string
 	id: string
+	raw: string
 }
