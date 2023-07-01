@@ -9,7 +9,7 @@ module.exports = {
 	experimental: {
 		optimizeUniversalDefaults: true,
 	},
-	content: ['./src/**/*.{js,ts,jsx,tsx,css,scss}'],
+	content: ['./src/**/*.{js,ts,jsx,tsx,css,scss}', './data/**/*.{md,mdx}'],
 	darkMode: 'class',
 	theme: {
 		extend: {
@@ -28,8 +28,7 @@ module.exports = {
 			},
 			colors: {
 				primary: colors.orange,
-				//@ts-ignore
-				gray: colors.neutral, // TODO: Remove ts-ignore after tw types gets updated to v3
+				gray: colors.neutral,
 			},
 			typography: (theme) => ({
 				DEFAULT: {

@@ -31,6 +31,28 @@ https://my.home-assistant.io/redirect/oauth
   country: SE #optional, added in 3.6.24
  ``` 
 
+### Example Spodcast automation
+ ```yaml
+ description: ""
+trigger:
+  - platform: time
+    at: "08:00:00"
+condition: []
+action:
+  - service: spotcast.start
+    data:
+      limit: 20
+      force_playback: false
+      random_song: false
+      repeat: "off"
+      shuffle: false
+      offset: 0
+      ignore_fully_played: false
+      entity_id: media_player.living_room
+      uri: spotify:track:6JTWpLuDTujTnBaNjEHydI
+mode: single
+ ```
+
 
 
 

@@ -1,0 +1,88 @@
+---
+title: How to integrate Youtube Music in to Home Assistant
+date: '2023-07-02'
+tags: ['YT Music', 'Home Assistant', 'Tutorial','Integration','Mini Media Player']
+draft: false
+summary: Wanna integrate Youtube Music in to Home Assistant? Here is how to do it!
+images: ['/static/images/thumbnails/v3.jpg']
+id: [u0hoJVogONI]
+layout: PostLayout
+canonicalUrl: yt-music-integration
+autores: ['default']
+---
+
+## YT Music Player Integration
+First, install it from HACS, then you can use this button to start the setup process:
+
+<center><a href="https://my.home-assistant.io/redirect/config_flow_start/?domain=ytube_music_player" target="_blank" rel="noopener"><img src="https://my.home-assistant.io/badges/config_flow_start.svg" alt="Open your Home Assistant and show de integration menu" /></a></center>
+
+1. [YT Music Player Documentation](https://github.com/KoljaWindeler/ytube_music_player/blob/main/README.md)
+2. [Mini Media Player Documentation](https://github.com/kalkih/mini-media-player/blob/master/README.md)
+
+### Example automation to start playing music on a specific speaker:
+```yaml
+alias: yt music automation
+description: ""
+trigger:
+  - platform: calendar
+    event: end
+    offset: "0:5:0"
+    entity_id: calendar.fixt
+action:
+  - service: media_player.select_source
+    data:
+      source: kitchen
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.play_media
+    data:
+      media_content_id: RDCLAK5uy_mplKe9BIYCO3ZuNWSHZr48bm9DUDzbWnE
+      media_content_type: playlist
+    target:
+      entity_id: media_player.ytube_music_player
+mode: single
+```
+
+### Get all available media players id's:
+```Jinja2
+{{ expand(states.media_player) 
+   | rejectattr('state', 'eq', 'unavailable')
+   | rejectattr('entity_id', 'eq', 'media_player.ytube_music_player')   
+   | map(attribute='entity_id')    
+   | list  
+   | replace('media_player.', '') 
+}}
+```
+
+## Mini Media Player Configuration:
+ ```yaml
+type: custom:mini-media-player
+entity: media_player.ytube_music_player
+artwork: cover
+hide:
+  shuffle: false
+  icon_state: false
+shortcuts:
+  columns: 3
+  buttons:
+    - name: Living Room
+      type: source
+      id: living_room
+    - name: Kitchen
+      type: source
+      id: kitchen
+    - name: Bedroom
+      type: source
+      id: bedroom
+    - name: My Likes
+      type: playlist
+      id: RDCLAK5uy_mplKe9BIYCO3ZuNWSHZr48bm9DUDzbWnE
+    - name: Playlist 2
+      type: playlist
+      id: RDCLAK5uy_n0_d5SZbBxft3QDuk3gjp2BO1Q4H6tclU
+ ``` 
+
+
+
+
+

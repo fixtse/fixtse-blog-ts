@@ -140,6 +140,9 @@ dependencies:
   vfile:
     specifier: ^6.0.0
     version: 6.0.0
+  word-wrap:
+    specifier: ^1.2.3
+    version: 1.2.3
 
 devDependencies:
   '@next/bundle-analyzer':
